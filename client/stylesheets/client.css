@@ -20,20 +20,31 @@ button[type="submit"] {
   float: right;
 }
 
-/* line 29, ../sass/client.scss */
+/* line 28, ../sass/client.scss */
+.chairs {
+  background: #da3743;
+  color: white;
+  border: 1px solid #da3743;
+  float: left;
+  font-size: 11px;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+/* line 38, ../sass/client.scss */
 body {
   background: #F7F7F7;
   margin: 0;
   font-family: source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-/* line 34, ../sass/client.scss */
+/* line 43, ../sass/client.scss */
 li {
   list-style-type: none;
   font-style: italic;
 }
 
-/* line 39, ../sass/client.scss */
+/* line 48, ../sass/client.scss */
 .options-wrapper {
   position: relative;
   background: #fff;
@@ -42,7 +53,7 @@ li {
   width: 80%;
 }
 
-/* line 47, ../sass/client.scss */
+/* line 56, ../sass/client.scss */
 .background {
   position: absolute;
   top: 0;
@@ -53,14 +64,14 @@ li {
   margin-top: 10px;
 }
 
-/* line 57, ../sass/client.scss */
+/* line 66, ../sass/client.scss */
 .pic {
   width: 100px;
   height: 100px;
   border-radius: 100%;
 }
 
-/* line 62, ../sass/client.scss */
+/* line 71, ../sass/client.scss */
 .profile {
   background-image: url("../images/logo2.jpg"), url("../images/BackgroundFood.jpg");
   background-repeat: no-repeat;
@@ -68,7 +79,7 @@ li {
   background-size: 39%, cover;
 }
 
-/* line 69, ../sass/client.scss */
+/* line 78, ../sass/client.scss */
 .info {
   color: white;
   display: inline-block;
@@ -76,21 +87,21 @@ li {
   margin-top: 2%;
 }
 
-/* line 77, ../sass/client.scss */
+/* line 86, ../sass/client.scss */
 .name {
   font-size: 34px;
 }
 
-/* line 80, ../sass/client.scss */
+/* line 89, ../sass/client.scss */
 .points {
   font-size: 14px;
 }
 
-/* line 83, ../sass/client.scss */
+/* line 92, ../sass/client.scss */
 .location-wrapper {
   background: white;
 }
-/* line 85, ../sass/client.scss */
+/* line 94, ../sass/client.scss */
 .location-wrapper input {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -101,11 +112,11 @@ li {
   border: 1px solid #f6f6f6;
 }
 
-/* line 95, ../sass/client.scss */
+/* line 104, ../sass/client.scss */
 .boxes {
   position: relative;
 }
-/* line 97, ../sass/client.scss */
+/* line 106, ../sass/client.scss */
 .boxes:before {
   content: "";
   position: absolute;
@@ -117,7 +128,7 @@ li {
   margin: 10px 0;
 }
 
-/* line 108, ../sass/client.scss */
+/* line 117, ../sass/client.scss */
 .options {
   background: linear-gradient(to bottom, #ffffff 0%, transparent 100%), linear-gradient(to top, #dddddd 0%, transparent 100%);
   display: inline-block;
@@ -128,36 +139,36 @@ li {
   margin: 0 10px 20px 10px;
   color: #da3743;
 }
-/* line 118, ../sass/client.scss */
+/* line 127, ../sass/client.scss */
 .options.active {
   background: #da3743;
   color: white;
   border-color: #da3743;
 }
 
-/* line 126, ../sass/client.scss */
+/* line 135, ../sass/client.scss */
 .RestaurantAvatar {
   float: left;
   padding-right: 5px;
 }
 
-/* line 131, ../sass/client.scss */
+/* line 140, ../sass/client.scss */
 .RestaurantInfo {
   float: left;
 }
 
-/* line 135, ../sass/client.scss */
+/* line 144, ../sass/client.scss */
 .ResultOption {
   overflow: hidden;
   margin-bottom: 10px;
   background: linear-gradient(to bottom, #ffffff 0%, transparent 100%), linear-gradient(to top, #dddddd 0%, transparent 100%);
 }
-/* line 139, ../sass/client.scss */
+/* line 148, ../sass/client.scss */
 .ResultOption:first-child {
   margin-top: 10px;
 }
 
-/* line 145, ../sass/client.scss */
+/* line 154, ../sass/client.scss */
 .RestaurantTags li {
   display: inline-block;
   border-radius: 100%;
@@ -168,67 +179,67 @@ li {
 }
 
 @media all and (max-width: 960px) {
-  /* line 157, ../sass/client.scss */
+  /* line 166, ../sass/client.scss */
   #header {
     padding: 10px 0;
   }
-  /* line 159, ../sass/client.scss */
+  /* line 168, ../sass/client.scss */
   #header img {
     width: 40%;
   }
 
-  /* line 169, ../sass/client.scss */
+  /* line 178, ../sass/client.scss */
   .options-wrapper {
     top: 160px;
     padding-top: 10px;
   }
 
-  /* line 173, ../sass/client.scss */
+  /* line 182, ../sass/client.scss */
   .info {
     margin-top: 0;
     display: block;
   }
 
-  /* line 178, ../sass/client.scss */
+  /* line 187, ../sass/client.scss */
   .ResultOption {
     overflow: hidden;
   }
 
-  /* line 182, ../sass/client.scss */
+  /* line 191, ../sass/client.scss */
   .RestaurantAvatar {
     float: left;
     padding-right: 5px;
   }
-  /* line 185, ../sass/client.scss */
+  /* line 194, ../sass/client.scss */
   .RestaurantAvatar img {
     display: inline-block;
     width: 100px;
   }
 
-  /* line 190, ../sass/client.scss */
+  /* line 199, ../sass/client.scss */
   .RestaurantInfo {
     display: inline-block;
     width: 50%;
     color: #da3743;
   }
 
-  /* line 196, ../sass/client.scss */
+  /* line 205, ../sass/client.scss */
   .RestaurantName {
     margin-top: 10px;
   }
 
-  /* line 199, ../sass/client.scss */
+  /* line 208, ../sass/client.scss */
   .restaurant {
     padding-bottom: 5px;
     font-size: 14px;
   }
-  /* line 202, ../sass/client.scss */
+  /* line 211, ../sass/client.scss */
   .restaurant.RestaurantName {
     font-size: 16px;
   }
 }
 @media all and (max-width: 480px) {
-  /* line 209, ../sass/client.scss */
+  /* line 218, ../sass/client.scss */
   .location-wrapper {
     position: relative;
     margin-bottom: 20px;
