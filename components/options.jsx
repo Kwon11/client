@@ -8,7 +8,8 @@ class Options extends React.Component {
       newRestriction: '',
       location: '',
       checked: false,
-      locationStr: ''
+      locationStr: '',
+      seats: 1
     };
 
     // this.handleNewRestriction = this.handleNewRestriction.bind(this);
@@ -18,6 +19,12 @@ class Options extends React.Component {
     this.configSubmitter = this.configSubmitter.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.getCurrentLocation = this.getCurrentLocation.bind(this);
+    this.selectChairs = this.selectChairs.bind(this);
+  }
+
+  selectChairs(e){
+    let chair = parseInt(e.target.value.split(" ")[0]);
+    this.setState({seats: chair});
   }
 
   handleRestrictionSubmit(e) {
@@ -35,7 +42,7 @@ class Options extends React.Component {
     console.log('currentRestrictions');
     if (e.target.className === "options") {
       this.state.checked = true;
-      currentRestrictions.push(e.target.name);
+      currentRestrictions.push(e.target.key);
       this.setState({restrictions: currentRestrictions});
       e.target.className = "options active";
 
@@ -52,7 +59,8 @@ class Options extends React.Component {
     e.preventDefault();
     var config = {
       restrictions: this.state.restrictions,
-      location: this.state.location
+      location: this.state.location,
+      seats: this.state.seats
     };
 
     this.props.navigateToResults(e, config);
@@ -92,6 +100,17 @@ class Options extends React.Component {
 
   render() {
     console.log(this.state);
+    console.log(this.state.seats,"seats");
+    var arr = [];
+    for (let i = 1; i < 10; i++) {
+      if(i === 1){
+        var c = "chair";
+      }
+      else{
+        c = "chairs"
+      }
+      arr.push(<option className='chair' key={i}>{i} {c}</option>);
+    }
     return (
       <div className="options-wrapper">
         <form onSubmit={this.configSubmitter}>
@@ -105,7 +124,9 @@ class Options extends React.Component {
             <div onClick={this.handleRestrictionChange} name="vegetarian" className="options">Vegetarian</div>
             <div onClick={this.handleRestrictionChange} name="paleolithic" className="options">Paleo</div>
           
-
+          <select className="chairs" onChange={this.selectChairs}>
+            {arr}
+          </select>
           <button type="submit" name="restaurants">Search</button>
         </form>
       </div>
